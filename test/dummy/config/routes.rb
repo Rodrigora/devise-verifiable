@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
 
-  mount Devise::Verifiable::Engine => "/devise_verifiable"
+  devise_for :users
+  # mount Devise::Verifiable::Engine => "/devise_verifiable"
 end

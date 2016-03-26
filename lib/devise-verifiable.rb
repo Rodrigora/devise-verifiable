@@ -1,6 +1,10 @@
 require "devise/verifiable/engine"
 
-module Devise
-  module Verifiable
-  end
-end
+# module Devise
+#   autoload :Verifiable, 'devise/verifiable'
+
+#   mattr_accessor :fields_for_verification
+#   @@fields_for_verification = []
+# end
+
+# Devise.add_module(:verifiable, :model => 'devise/models/verifiable')
