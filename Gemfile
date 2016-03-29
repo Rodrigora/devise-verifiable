@@ -10,6 +10,9 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+gem 'rails',    '~> 4.2.6'
+gem 'devise',   '~> 3.5.0'
+
 # To use a debugger
-# gem 'byebug', group: [:development, :test]
+gem 'byebug'
 
