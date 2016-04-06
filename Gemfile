@@ -15,4 +15,3 @@ gem 'devise',   '~> 3.5.0'
 
 # To use a debugger
 gem 'byebug'
-

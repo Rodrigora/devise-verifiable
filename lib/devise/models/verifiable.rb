@@ -31,8 +31,26 @@ module Devise
         self.class.fields_for_verification.all? { |field| send("#{field}?") }
       end
 
+      def valid_for_verification?
+        self.class.fields_for_verification.each do |field|
+          validate_for_verification(field)
+        end
+        errors.empty?
+      end
+
+      protected
+
+      def validate_for_verification(field)
+        errors.add(field, I18n.t('errors.messages.blank')) if send(field).blank?
+      end
+
       module ClassMethods
         Devise::Models.config(self, :fields_for_verification)
+
+
+        def verify_fields(*fields)
+          self.fields_for_verification = fields
+        end
       end
     end
   end

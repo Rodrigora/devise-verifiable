@@ -24,3 +24,7 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActionDispatch::IntegrationTest.fixture_path = ActiveSupport::TestCase.fixture_path
   ActiveSupport::TestCase.fixtures :all
 end
+
+class ActiveSupport::TestCase
+  include Matchers
+end

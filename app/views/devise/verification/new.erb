@@ -1,0 +1,17 @@
+<h2>Account Verification</h2>
+
+<%= form_for(resource, as: resource_name, url: user_verification_path, method: :post) do |f| %>
+
+  <%= devise_error_messages! %>
+
+  <%- resource_class.fields_for_verification.each do |field| %>
+    <div class="field">
+      <%= f.label field %><br />
+      <%= f.email_field field, autofocus: true %>
+    </div>
+  <%  end  %>
+
+  <div class="actions">
+    <%= f.submit "Verify" %>
+  </div>
+<% end %>

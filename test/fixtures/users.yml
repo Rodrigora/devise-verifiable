@@ -1,0 +1,11 @@
+
+john:
+  email: "john@gmail.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, '12345678') %>
+
+
+verified_john:
+  email: "verified-john@gmail.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, '12345678') %>
+  full_name: Verified John Doe
+  address: 551, 5th Street
