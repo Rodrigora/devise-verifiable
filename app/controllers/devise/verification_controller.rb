@@ -1,4 +1,4 @@
-class Devise::VerificationsController < DeviseController
+class Devise::VerificationController < DeviseController
   before_action :authenticate_scope!
 
   def new

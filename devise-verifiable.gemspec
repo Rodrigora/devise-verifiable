@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Devise::Verifiable::VERSION
   s.authors     = ['Rodrigo Ra']
   s.email       = ['rodrigorcomp@gmail.com']
-  s.homepage    = 'TODO'
-  s.summary     = 'TODO: Summary of DeviseVerifiable.'
-  s.description = 'TODO: Description of DeviseVerifiable.'
+  s.homepage    = 'http://github.com/Rodrigora/devise-verifiable'
+  s.summary     = 'Summary of DeviseVerifiable.'
+  s.description = 'Description of DeviseVerifiable.'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']

@@ -1,4 +1,5 @@
 require 'devise'
+require "devise/verifiable/routes"
 require "devise/verifiable/engine"
 
 module Devise
@@ -14,4 +15,6 @@ module Devise
   @@helpers << Devise::Verifiable::Controller::Helpers
 end
 
-Devise.add_module :verifiable, model: 'devise/models/verifiable'
+Devise.add_module :verifiable, model: 'devise/models/verifiable',
+                               controller: :verifications,
+                               route: { verification: [:new, :create] }

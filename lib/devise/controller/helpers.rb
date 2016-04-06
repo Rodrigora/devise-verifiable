@@ -11,7 +11,7 @@ module Devise
 
             def authenticate_verified_#{mapping}!(opts={})
               authenticate_#{mapping}!
-              redirect_to '/users/sign_in' unless current_#{mapping}.verified?
+              redirect_to '/users/verify' unless current_#{mapping}.verified?
             end
 
           METHODS
