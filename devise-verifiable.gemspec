@@ -10,16 +10,17 @@ Gem::Specification.new do |s|
   s.authors     = ['Rodrigo Ra']
   s.email       = ['rodrigorcomp@gmail.com']
   s.homepage    = 'http://github.com/Rodrigora/devise-verifiable'
-  s.summary     = 'Summary of DeviseVerifiable.'
-  s.description = 'Description of DeviseVerifiable.'
+  s.summary     = 'DeviseVerifiable adds a second step to Devise\'s signup process'
+  s.description = 'DeviseVerifiable is a Devise extension which adds a second step to sign up process'
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
+  s.required_ruby_version = '>= 2.0.0'
 
-  s.add_dependency 'rails', '~> 4.2.6'
-  s.add_dependency 'devise', '~> 3.5.0'
+  s.add_dependency 'rails', '~> 4.2'
+  s.add_dependency 'devise', '~> 3.5'
 
-  s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'capybara', '~> 2.6.2'
+  s.add_development_dependency 'sqlite3', '~> 1.3'
+  s.add_development_dependency 'capybara', '~> 2.6'
 end
