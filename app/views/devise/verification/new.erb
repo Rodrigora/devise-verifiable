@@ -7,7 +7,7 @@
   <%- resource_class.fields_for_verification.each do |field| %>
     <div class="field">
       <%= f.label field %><br />
-      <%= f.email_field field, autofocus: true %>
+      <%= f.text_field field, autofocus: true %>
     </div>
   <%  end  %>
 

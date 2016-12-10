@@ -4,7 +4,7 @@
 
 DeviseVerifiable adds a second step to registration process.
 
-This is useful if you want to register users with additional information or verify the user's
+This is useful to register users with additional information or verify the users
 identity through a third-party service such as BlockScore.
 
 
@@ -19,9 +19,8 @@ gem 'devise-verifiable'
 
 ## Configuration
 
-DeviseVerifiable adds a configuration variable to devise called
-`fields_for_verification`. You can configure which fields you want
-to be filled in the verification step:
+DeviseVerifiable adds a configuration variable called
+`fields_for_verification`. It configures which fields will be filled in the verification step:
 
 ```ruby
 Devise.setup do |config|
@@ -29,10 +28,8 @@ Devise.setup do |config|
 end
 ```
 
-To include DeviseVerifiable to your model, add the `verifiable`
+To include DeviseVerifiable in a model, add the `verifiable`
 module to Devise modules:
-
-list:
 
 ```ruby
 class User < ActiveRecord::Base
@@ -41,9 +38,7 @@ end
 ```
 
 
-If you have multiple models configured with devise, you can
-define the fields for verification individually for each of
-them using the `verify_fields` method:
+If you have multiple models configured with devise, define the fields for verification individually using the `verify_fields` method:
 
 ```ruby
 class User < ActiveRecord::Base
@@ -53,7 +48,7 @@ class User < ActiveRecord::Base
 end
 ```
 
-To restrict unvefied users from access certain pages, you can use the helper
+To restrict unverified users from access certain pages, use the helper
 `:authenticate_verified_user!`:
 
 ```ruby
@@ -127,8 +122,7 @@ end
 
 ## Customizing the verification
 
-Maybe you need to use a third-party service the user's identity or simple ask user to answer
-some questions.
+To use a third-party service to verify the user identity.
 
 ### View
 To customize the verification view, following the devise conventions, create a file in
