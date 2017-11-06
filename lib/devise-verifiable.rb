@@ -17,4 +17,4 @@ end
 
 Devise.add_module :verifiable, model: 'devise/models/verifiable',
                                controller: :verifications,
-                               route: { verification: [:new, :create] }
+                               route: { verification: [nil, :new, :create] }

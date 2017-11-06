@@ -1,6 +1,6 @@
 <h2>Account Verification</h2>
 
-<%= form_for(resource, as: resource_name, url: user_verification_path, method: :post) do |f| %>
+<%= form_for(resource, as: resource_name, url: verification_path(resource_name), method: :post) do |f| %>
 
   <%= devise_error_messages! %>
 
