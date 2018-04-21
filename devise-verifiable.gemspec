@@ -18,8 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
   s.required_ruby_version = '>= 2.0.0'
 
-  s.add_dependency 'rails', '>= 4.2'
-  s.add_dependency 'devise', '>= 3.5'
+  s.add_dependency 'devise', '~> 4.4'
 
   s.add_development_dependency 'sqlite3', '~> 1.3'
   s.add_development_dependency 'capybara', '~> 2.6'
